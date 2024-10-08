@@ -13,6 +13,6 @@ public class main {
     }
     
     public static void main(String[] args) {
-    	System.out.print(Inverse_string(123456));
+    	System.out.print(Invert2(11223));
     }
 }
