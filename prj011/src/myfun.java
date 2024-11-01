@@ -31,6 +31,7 @@ public class myfun {
         return p;
     }
 
+    // 輸出提示訊息(msg)，並讓使用者輸入文字
     static String Input(String msg) {
         String s = "";
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -43,6 +44,7 @@ public class myfun {
         return s;
     }
 
+    // 輸出提示訊息(msg)，並讓使用者輸入數字（並檢查只能是數字）
     static int InputInt(String msg) {
         int k = 0;
         String sans = "";
@@ -61,6 +63,7 @@ public class myfun {
         return bnd;
     }
 
+    // 檢查字串s內是否有重複的數字
     static boolean checksame(String s) {
         int n = s.length();
         String z1, z2;
@@ -76,17 +79,17 @@ public class myfun {
         return (false);
     }
 
-    // 0 ~ n-1 整數
+    // 隨機產生 0 ~ n-1 整數
     static int RandN(int n) {
         return ((int) (Math.random() * n));
     }
 
-    // n ~ m 整數
+    // 隨機產生 n ~ m 整數
     static int RandNM(int n, int m) {
         return (n + RandN(m - n + 1));
     }
 
-    // 產生四位數字
+    // 隨機產生四位數字
     static int getAnswer() {
         int ans = 1111;
         while (myfun.checksame(String.valueOf(ans)) == true) {
