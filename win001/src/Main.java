@@ -17,11 +17,28 @@ public class Main extends Frame {
 
     // override "Frame" 中的 paint 函式
     public void paint(Graphics g) {
-        g.drawLine(100, 100, 340, 400);
+        // Color cr = new Color(255, 0, 0); 紅色
+        // g.setColor(cr);
+
+        for (int i = 0; i < 1000; i++) {
+            int _r = myfun.RandNM(0, 255);
+            int _g = myfun.RandNM(0, 255);
+            int _b = myfun.RandNM(0, 255);
+            g.setColor(new Color(_r, _g, _b));
+
+            int x1 = myfun.RandNM(0, 600);
+            int y1 = myfun.RandNM(0, 500);
+            int x2 = myfun.RandNM(0, 600);
+            int y2 = myfun.RandNM(0, 500);
+            //g.drawLine(x1, y1, x2, y2);
+            //g.drawRect(x2, y2, x1, y1);
+            //g.fillRect(x1, y1, x2, y2);
+            //g.drawOval(x1, y1, x2 - x1, y2 - y1);
+            g.fillOval(x1, y1, x2 - x1, y2 - y1);
+        }
     }
 
     public static void main(String[] args) {
-
         Main mm = new Main(600, 500, 100, 300);   // 執行建構子函式
     }
 }
