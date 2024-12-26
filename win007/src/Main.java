@@ -53,34 +53,22 @@ public class Main extends Frame implements WindowListener, MouseMotionListener, 
         }
     }
 
-    @Override
     public void windowClosing(WindowEvent e) {
         this.dispose();
     }
 
-    @Override
     public void mouseDragged(MouseEvent e) {
-        if(mbt == MouseEvent.BUTTON1) {
-            omx = mx;
-            omy = my;
-            mx = e.getX();
-            my = e.getY();
-            repaint();
-        } else if (mbt == MouseEvent.BUTTON3) {
-            mx = e.getX();
-            my = e.getY();
-            repaint();
-        }
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-        mbt = e.getButton();
-
-        mx = e.getX();
-        my = e.getY();
         omx = mx;
         omy = my;
+        mx = e.getX();
+        my = e.getY();
+        repaint();
+    }
+
+    public void mousePressed(MouseEvent e) {
+        mbt = e.getButton();
+        mx = e.getX();
+        my = e.getY();
     }
 
     @Override
@@ -88,7 +76,6 @@ public class Main extends Frame implements WindowListener, MouseMotionListener, 
         mbt = 0;
     }
 
-    @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == buttons[0]) {
             cr = new Color(255, 0, 0);
